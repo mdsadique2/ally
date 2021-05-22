@@ -1,0 +1,5 @@
+@media all and (max-width: 768px) {
+    .app-header {
+        padding: var(--spacing-medium);
+    }
+}
