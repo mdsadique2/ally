@@ -29,13 +29,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 
 
-## Other details
-- Input search has debounce latency of 250ms
-- React library is used to achieve the highlighting part.
-- All the static strings are served from an object.
-
-
-
 ## Code details in `SRC` directory
 
 
