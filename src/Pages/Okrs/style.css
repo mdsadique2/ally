@@ -1,0 +1,21 @@
+.filter-container {
+    position: sticky;
+    top: 70px;
+    background-color: var(--color-app-background);
+    padding-top: var(--spacing-medium);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    z-index: 1;
+}
+
+.filter {
+    background-color: var(--color-white);
+    padding: var(--spacing-medium);
+    border: 1px solid var(--color-border-grey);
+    box-shadow: var(--box-shadow-1);
+    border-radius: var(--border-radius);
+}
+
+.chirdren-details {
+    padding: var(--spacing-large) 0;
+}

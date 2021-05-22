@@ -1,0 +1,17 @@
+/* mobile phone */
+@media all and (max-width: 768px) {
+    .modal {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .modal .modal-header{
+        text-align: center;
+        padding-bottom: var(--spacing-x-large);
+    }
+
+    .modal .close-button {
+        width: 100%;
+    }
+}

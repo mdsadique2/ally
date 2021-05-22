@@ -1,0 +1,80 @@
+.accordion-container {
+    padding: var(--spacing-large);
+    margin: var(--spacing-medium) 0;
+    border: 1px solid var(--color-border-grey);
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+}
+
+.accordion-container .accordion-header {
+    display: flex;
+    font-family: var(--font-family-headers);
+    font-size: var(--font-x-large);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: var(--all-transtion);
+}
+
+.accordion-container .accordion-header:hover {
+    color: var(--color-text-primary-hover);
+}
+
+.accordion-container .chev {
+    margin-right: var(--spacing-medium);
+    transform: rotate(90deg);
+    transition: var(--all-transtion);
+}
+
+.accordion-container .accordion-header .badge {
+    font-size: var(--font-small);
+    display: inline-block;
+    font-family: var(--font-family-body-text);
+    background-color: var(--color-primary-active);
+    color: var(--color-white);
+    padding: var(--spacing-x-small);
+    font-weight: 100;
+    border-radius: var(--border-radius-small);
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.accordion-container .children {
+    padding: var(--spacing-small);
+    cursor: pointer;
+    color: var(--color-primary);
+    transition: var(--all-transtion);
+}
+
+.accordion-container .children:hover {
+    color: var(--color-primary-active);
+    background-color: var(--color-app-background);
+    border-radius: var(--border-radius-small);
+}
+
+.accordion-container .accordion-body {
+    padding-left: var(--spacing-large);
+    max-height: 500px;
+    overflow: auto;
+    transition: var(--all-transtion);
+    margin-top: var(--spacing-medium);
+
+}
+
+.accordion-container.accordion-close .accordion-body {
+    max-height: 0px;
+    overflow: hidden;
+    margin-top: 0px;
+}
+
+
+.accordion-container.accordion-close .chev {
+   transform: rotate(0deg);
+}
+
+.accordion-container .no-children {
+    color: var(--color-dark-grey);
+    background-color: var(--color-app-background);
+    border-radius: var(--border-radius-small);
+    padding: var(--spacing-small);
+    text-align: center;
+}

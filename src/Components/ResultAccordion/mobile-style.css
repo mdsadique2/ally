@@ -1,0 +1,19 @@
+/* mobile phone */
+@media all and (max-width: 768px) {
+    .accordion-container {
+        padding: var(--spacing-medium);
+    }
+
+    .accordion-container .accordion-header {
+        font-size: var(--font-large);
+    }
+    
+    .accordion-container .chev {
+        font-size: var(--font-x-large);
+        
+    }
+
+    .accordion-container .accordion-header .badge {
+        margin-bottom: var(--spacing-medium);
+    }
+}

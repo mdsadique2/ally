@@ -1,0 +1,18 @@
+.select-container select{
+    padding: var(--spacing-small);
+    border-radius: 4px;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    outline: none;
+    cursor: pointer;
+    font-family: var(--font-family-body-text);
+    font-size: var(--font-large);
+    transition: var(--all-transtion);
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+}
+
+.select-container select:hover {
+    box-shadow: var(--box-shadow-1-hover);
+}

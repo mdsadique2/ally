@@ -1,0 +1,85 @@
+:root {
+    --base-rem-size: 1rem;
+
+    --font-small: 10px;
+    --font-medium: 12px;
+    --font-large: 16px;
+    --font-x-large: 24px;
+    --font-xx-large: 32px;
+
+    --font-regular: 14px;
+
+    --all-transtion: all 0.25s ease;
+
+    --color-white: #fafbfe;
+    --color-primary: #13b486;
+    --color-primary-hover: #169b75;
+    --color-primary-active: #198a6a;
+
+    --color-danger: #df513f;
+    --color-danger-hover: #b83f30;
+    --color-danger-active: #973629;
+
+
+    --color-dark-grey: #555766;
+    --color-transparent: rgba(0,0,0,0);
+    --color-app-background: #eef1f1;
+    --color-border-grey: #efefef;
+    --color-text-primary: #404b64;
+    --color-text-primary-hover: #1e2535;
+
+
+
+    --spacing-x-small: calc(var(--base-rem-size) * 0.25);
+    --spacing-small:   calc(var(--base-rem-size) * 0.5);
+    --spacing-medium:  calc(var(--base-rem-size) * 1);
+    --spacing-large:   calc(var(--base-rem-size) * 1.5);
+    --spacing-x-large: calc(var(--base-rem-size) * 2);
+
+    --box-shadow-1: 0 2px 15px -3px rgb(0 0 0 / 31%);
+    --box-shadow-1-hover: 0 8px 4px -5px rgb(0 0 0 / 15%);
+
+    --border-radius: 8px;
+    --border-radius-small: 4px;
+
+    --font-family-headers: 'Roboto Slab', serif;
+    --font-family-body-text: 'Rubik', sans-serif;
+
+
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--color-app-background);
+    color: var(--color-text-primary);
+    margin: 0;
+    font-family: var(--font-family-body-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-family-headers);
+    letter-spacing: 1px;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: var(--all-transtion);
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+a:active {
+    color: var(--color-primary-active);
+}

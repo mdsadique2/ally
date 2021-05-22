@@ -1,0 +1,11 @@
+/* tablet */
+@media all and (max-width: 1024px) {
+    .app-container {
+        max-width: 100%;
+    }
+}
+
+/* mobile phone */
+@media all and (max-width: 768px) {
+  
+}
