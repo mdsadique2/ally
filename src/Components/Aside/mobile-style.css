@@ -9,6 +9,7 @@
     .modal .modal-header{
         text-align: center;
         padding-bottom: var(--spacing-x-large);
+        margin-bottom: var(--spacing-x-large);
     }
 
     .modal .close-button {

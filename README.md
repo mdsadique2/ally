@@ -1,5 +1,6 @@
 ### Heroku url
 
+https://allycard.herokuapp.com/okrs
 
 
 
