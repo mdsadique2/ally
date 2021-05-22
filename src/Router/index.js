@@ -8,9 +8,6 @@ import App  from '../App';
 
 
 export default class RouterComp extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <Router>

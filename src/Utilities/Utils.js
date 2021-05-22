@@ -1,49 +1,22 @@
-const MONTH_NAMES = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
-  ];
 
 const utils = {
-
-  // returns a debounced function.
-  debounce: function (func, wait, immediate) {
-    let timeout;
-    return function() {
-        let context = this, args = arguments;
-        let later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        let callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-  },
-
-  sortObjectArray: (arr, propToSort) => {
-    return arr.sort(function (a, b) {
-      let x = a[propToSort] === undefined ? 0 : a[propToSort];
-      let y = b[propToSort] === undefined ? 0 : b[propToSort];
-      return y - x;
-    });
-  },
-
 
   createDisplayDataTree: (sourceData) => {
     let arrToReturn = [];
     let mappedObject = {};
-    
-    for (let i=0; i<sourceData.length; i++) {
-      let {id, parent_objective_id} = sourceData[i];
+
+    // creating an object to classify parents and children
+    sourceData.forEach((elm, i) => {
+      let {id, parent_objective_id} = elm;
+      
       if (!parent_objective_id) {
         if(!mappedObject[id]) {
           mappedObject[id] = {
-            self: sourceData[i],
+            self: elm,
             children: []
           };
         } else {
-          mappedObject[id].self = sourceData[i];
+          mappedObject[id].self = elm;
         }
       } else {
         if (!mappedObject[parent_objective_id]) {
@@ -52,10 +25,12 @@ const utils = {
             children: []
           };
         }
-        mappedObject[parent_objective_id].children.push(sourceData[i]);
+        mappedObject[parent_objective_id].children.push(elm);
       }
-    }
+    });
 
+
+    // squashing th object in array of objects used in app
     for (let key in mappedObject) {
       if (!mappedObject[key].self) {
         continue;
@@ -67,6 +42,8 @@ const utils = {
     return arrToReturn;
   },
 
+
+  // return the unique elements array
   getFilters: (data, filterParam) => {
     let arr = [];
     arr = data.map( elm => elm[filterParam])
