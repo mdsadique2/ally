@@ -20,9 +20,12 @@
 }
 
 .accordion-container .chev {
-    margin-right: var(--spacing-medium);
     transform: rotate(90deg);
     transition: var(--all-transtion);
+}
+
+.accordion-container .title {
+    margin: 0 var(--spacing-medium);
 }
 
 .accordion-container .accordion-header .badge {

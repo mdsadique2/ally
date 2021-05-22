@@ -53,7 +53,7 @@ const ResultAccordion = (props) => {
                 <div className="chev">
                     &#8250;
                 </div>
-                <div>
+                <div className="title">
                     {renderData.title}
                 </div>
                 <div className="badge">
