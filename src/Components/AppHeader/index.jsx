@@ -1,6 +1,7 @@
 import React from 'react';
 import appStrings from 'Utilities/StringConst';
 import './style.css';
+import './mobile-style.css';
 
 const AppHeader = () => {
     return (
